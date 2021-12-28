@@ -14,6 +14,8 @@ on:
       - "scripts/install_deepchem_conda.ps1"
       - "scripts/install_deepchem_conda.sh"
       - "env.*.yml"
+  workflow_dispatch:
+
 jobs:
   bash-build:
     runs-on: ${{ matrix.os }}
