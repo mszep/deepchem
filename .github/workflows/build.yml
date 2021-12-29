@@ -76,6 +76,11 @@ jobs:
         python-version: [3.7]
     steps:
     - uses: actions/checkout@v2
+    - name: Build Boost
+      uses: MarkusJx/install-boost@v2.1.0
+      id: install-boost
+      with:
+        boost_version: 1.73.0
     - name: Cache pip packages for Windows
       uses: actions/cache@v2
       with:
